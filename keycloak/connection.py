@@ -156,6 +156,7 @@ class ConnectionManager(object):
             HttpError: Can't connect to server.
         """
         try:
+            print urljoin(self.base_url, path)
             return self._s.post(urljoin(self.base_url, path),
                                 params=kwargs,
                                 data=data,
