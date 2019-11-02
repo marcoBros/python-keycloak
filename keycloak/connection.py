@@ -135,6 +135,7 @@ class ConnectionManager(object):
         """
 
         try:
+            print urljoin(self.base_url, path)
             return self._s.get(urljoin(self.base_url, path),
                                params=kwargs,
                                headers=self.headers,
